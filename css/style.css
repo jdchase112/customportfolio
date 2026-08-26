@@ -204,13 +204,21 @@ html {
 
 /* #TYPOGRAPHY  */
 body {
-    font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+    /* font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif; */
+    font-family: "garamond-premier-pro", serif;
     color: #343845;
     margin: 0 auto;
     padding: 0;
     font-size: 87.5%;
-    line-height: 1.5em;
+    line-height: 1.3;
     background-color: #343845;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "aktiv-grotesk", Helvetica, Arial, sans-serif;
+    font-weight: 600;
 }
 
 h1 {
@@ -272,14 +280,16 @@ img {
 .site-identity {
     max-width: 700px;
     margin-inline: auto;
-    padding-inline: 1em;
+    padding-inline: 3em;
 
     h1 {
         font-size: 7.5em;
+        font-size: clamp(4em, 15vw, 7.5em);
         font-weight: 700;
         font-family: "aktiv-grotesk", sans-serif;
         letter-spacing: -0.04em;
         text-align: left;
+        padding: 0;
         margin: 0;
 
         a {
@@ -288,12 +298,14 @@ img {
 
     }
 
-    h3 {
+    h2 {
         font-size: 3em;
+        font-size: clamp(1.5em, 5vw, 3em);
         font-weight: 200;
         font-family: "aktiv-grotesk-thin", sans-serif;
         text-align: right;
-        margin-top: 2em;
+        margin: 0;
+        padding: 0;
         opacity: 0.95;
         color: #fcfcfd;
 
@@ -330,7 +342,8 @@ img {
 
 .site-main {
     background-color: rgb(245, 245, 245);
-    padding: 7em;
+    padding-block: 7em;
+    padding-inline: 2em;
 }
 
 .sub-head {
@@ -381,7 +394,7 @@ section {
 .thumbgrid {
     width: 100%;
     max-width: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     padding-bottom: 2em;
     display: flex;
@@ -405,9 +418,15 @@ section {
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
+@media (width < 1000px) {
     .thumbgrid li {
         width: calc(50% - 1em);
+    }
+}
+
+@media (width < 500px) {
+    .thumbgrid li {
+        width: 100%;
     }
 }
 
@@ -464,6 +483,19 @@ section {
     max-width: 100%;
 }
 
+.widescreen-hero {
+    @media (width < 500px) {
+        display: none;
+    }
+}
+
+.smallscreen-hero {
+
+    @media (width >=500px) {
+        display: none;
+    }
+}
+
 .sub-page-navigation {
     width: 100%;
     padding: 1.25em 0;
@@ -475,6 +507,7 @@ section {
 
 .sub-page-navigation h1 {
     font-size: 2em;
+    font-size: clamp(1.25em, 4vw, 2em);
     letter-spacing: -0.04em;
     font-family: "aktiv-grotesk", sans-serif;
     font-weight: 600;
@@ -500,6 +533,7 @@ section {
     font-weight: 200;
     font-style: normal;
     font-size: 1.75em;
+    font-size: clamp(1.25em, 4vw, 1.75em);
     margin: 0 0.5em;
     display: flex;
 }
@@ -537,7 +571,7 @@ section {
     }
 
     p {
-        font-family: "garamond-premier-pro", serif;
+        /* font-family: "garamond-premier-pro", serif; */
         font-weight: 400;
         font-style: normal;
         font-size: 1.2em;
@@ -566,7 +600,7 @@ section {
     }
 
     p {
-        font-family: "garamond-premier-pro", serif;
+        /* font-family: "garamond-premier-pro", serif; */
         font-weight: 400;
         font-style: normal;
         font-size: 1.2em;
@@ -578,7 +612,7 @@ section {
     }
 
     a {
-        font-family: "garamond-premier-pro", serif;
+        /* font-family: "garamond-premier-pro", serif; */
         font-weight: 600;
         font-style: normal;
         font-size: 1.2em;
@@ -650,13 +684,6 @@ section {
     width: 100%;
 }
 
-/* HERO SECTIONS */
-/* .hero {
-    padding: 4em 0;
-    background: #dedede;
-    margin-bottom: 6em;
-} */
-
 .project-main {
     padding: 0;
     margin: 0;
@@ -667,11 +694,20 @@ section {
 
     display: block;
     max-width: 1000px;
-    padding-block: 5em;
+    padding-block: 4em;
+    padding-inline: 2em;
 
     div {
         margin: 0;
         padding: 0;
+    }
+
+    .row {
+        display: block;
+
+        @media (width > 920px) {
+            display: flex;
+        }
     }
 
     h2 {
@@ -682,18 +718,40 @@ section {
         margin-bottom: 0.5em;
     }
 
-    h3 {
+    .one-third {
+        @media(width < 920px) {
+            width: 100%;
+        }
+    }
+
+    strong {
+        font-size: 1.125em;
+        font-family: garamond-premier-pro-caption, serif;
+        font-weight: 600;
+        text-transform: lowercase;
+        font-variant: small-caps;
+    }
+
+    .project-content-heading {
         font-family: garamond-premier-pro, serif;
         font-weight: 600;
         font-style: normal;
         font-size: 2.75em;
         margin: 0;
         padding: 0;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.25em;
         color: #252832;
+        text-transform: lowercase;
+        font-variant: small-caps;
+        text-align: right;
+
+        @media (width < 920px) {
+            text-align: left;
+        }
+
     }
 
-    .italic {
+    .project-subheading {
         font-family: garamond-premier-pro, serif;
         font-weight: 600;
         font-style: italic;
@@ -702,15 +760,6 @@ section {
         padding: 0;
         margin-bottom: 0.75em;
         color: #4f5361;
-    }
-
-    .row .two-thirds {
-        max-width: 600px;
-    }
-
-    .row .one-fourth {
-        justify-content: right;
-        text-align: right;
     }
 
     p {
@@ -723,6 +772,11 @@ section {
         padding-bottom: 4em;
         text-wrap: pretty;
         max-width: 65ch;
+
+        @media (width < 920) {
+            padding: 0;
+            padding-bottom: 2em;
+        }
     }
 
     .three-fourths p {
@@ -754,10 +808,14 @@ section {
     display: block;
     background-color: #f1f1f1;
     padding-top: 4.5em;
+    padding-inline: 1.5em;
 
     h2 {
+        font-size: 3em;
+        /* font-size: clamp(2.75em, 6vw, 3em); */
         max-width: none;
         text-align: center;
+        text-wrap: pretty;
         align-content: center;
         align-items: center;
         padding: 0;
@@ -769,8 +827,7 @@ section {
 }
 
 .other-projects {
-    width: 1000px;
-    max-width: none;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0;
     padding-bottom: 5em;
@@ -783,7 +840,8 @@ section {
 
 .other-projects li {
     list-style: none;
-    width: calc(25% - 2em);
+    width: calc(30% - 2em);
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -797,7 +855,8 @@ section {
 
 @media (max-width: 768px) {
     .other-projects li {
-        width: calc(50% - 1em);
+        width: calc(75% - 1em);
+
     }
 }
 
