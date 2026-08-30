@@ -247,6 +247,10 @@ a:hover {
     font-variant: small-caps;
 }
 
+.text-right {
+    text-align: right;
+}
+
 /* #IMAGES */
 img {
     max-width: 100%;
@@ -645,10 +649,6 @@ section {
         font-size: 1.5em;
     }
 
-    .text-right {
-        text-align: right;
-    }
-
     .last-paragraph {
         margin: 0;
         padding: 0;
@@ -700,6 +700,7 @@ section {
     div {
         margin: 0;
         padding: 0;
+        text-wrap: pretty;
     }
 
     .row {
@@ -712,11 +713,19 @@ section {
 
     h2 {
         font-size: 3em;
-        font-family: "aktiv-grotesk", serif;
+        font-family: "aktiv-grotesk", sans-serif;
         font-weight: 700;
         font-style: normal;
         margin-bottom: 0.1em;
     }
+
+    h3 {
+        font-size: 2.5em;
+        font-family: "garamond-premier-pro", serif;
+        font-style: normal;
+        color: #4f5361;
+    }
+
 
     .one-third {
         @media(width < 920px) {
@@ -794,12 +803,84 @@ section {
         margin-bottom: 2em;
     }
 
-    font-family: garamond-premier-pro-caption,
-    serif;
-    font-weight: 600;
-    font-style: italic;
+    .project-visuals {
+        padding: 2em 0 2em 0;
+        margin: 0;
+        line-height: 1;
 
+        strong {
+            font-size: 1em;
+            font-family: garamond-premier-pro-caption, serif;
+            font-weight: 600;
+            text-transform: none;
+            font-variant: normal;
+        }
 
+        img {
+            padding-bottom: 2em;
+            margin: 0;
+            opacity: 95%;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+            opacity: 1;
+        }
+
+        .project-visuals-subheading {
+            font-size: 0.6em;
+            font-weight: 400;
+            color: #6b7392;
+            margin: 0;
+            padding: 0;
+        }
+
+        .caption {
+            max-width: 65ch;
+            padding-bottom: 2em;
+            font-size: 1.125em;
+        }
+
+        .caption-right {
+            padding-bottom: 2em;
+            text-align: right;
+            font-size: 1.125em;
+        }
+
+    }
+
+}
+
+.fullwidth-images {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: #1f2129;
+}
+
+.fullwidth-images img {
+    display: block;
+    opacity: 95%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.fullwidth-images img:hover {
+    opacity: 100%;
+    transform: scale(1.005);
+}
+
+.fullwidth-images .image-padding {
+
+    padding: 7em;
+    display: flex;
+    flex-direction: column;
+    gap: 7em;
+
+    @media(width<768px) {
+        padding: 4em;
+        gap: 4em;
+    }
 
 }
 
