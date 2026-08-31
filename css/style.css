@@ -756,11 +756,16 @@ section {
         font-variant: small-caps;
     }
 
+    .sixtyfivech {
+        max-width: 65ch;
+    }
+
     .project-content-heading {
         font-family: garamond-premier-pro, serif;
         font-weight: 600;
         font-style: normal;
         font-size: 2.75em;
+        max-width: 65ch;
         margin: 0;
         padding: 0;
         color: #252832;
@@ -875,7 +880,7 @@ section {
 
         .project-thumbgrid img {
             list-style: none;
-            width: calc(33.33333% - 1.5em);
+            width: calc(33.33333% - 1.35em);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -883,9 +888,13 @@ section {
 
         @media (max-width: 768px) {
             .project-thumbgrid img {
-                width: calc(100% - 1em);
+                width: 100%;
 
             }
+        }
+
+        .extra-bottom-padding {
+            padding-bottom: 3em;
         }
 
     }
