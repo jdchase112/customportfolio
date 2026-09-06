@@ -394,6 +394,11 @@ section {
     transition: opacity 0.3s ease;
 }
 
+video {
+    height: auto;
+    max-width: 100%;
+}
+
 .image-container:hover .img-hover {
     opacity: 1;
 }
@@ -829,6 +834,14 @@ section {
             max-width: 65ch;
         }
 
+        strong {
+            font-size: 1em;
+            font-family: garamond-premier-pro-caption, serif;
+            font-weight: 600;
+            text-transform: none;
+            font-variant: normal;
+        }
+
     }
 
     .nudge-down {
@@ -854,15 +867,15 @@ section {
 
         img {
             margin-bottom: 2em;
-            opacity: 95%;
+            opacity: 100%;
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
-        img:hover {
+        /* img:hover {
             transform: scale(1.02);
             opacity: 1;
             box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.03);
-        }
+        } */
 
         .project-visuals-subheading {
             font-size: 0.6em;
@@ -928,10 +941,10 @@ section {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.fullwidth-images img:hover {
+/* .fullwidth-images img:hover {
     opacity: 100%;
     transform: scale(1.005);
-}
+} */
 
 .explore {
     display: block;
