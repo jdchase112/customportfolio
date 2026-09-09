@@ -267,9 +267,80 @@ img {
 
 .site-header {
     text-align: center;
-    background-color: #343845;
     text-transform: lowercase;
-    padding: 8em 0 4em 0;
+    background-color: #f1f1f1;
+}
+
+.site-header-home {
+    text-align: center;
+    text-transform: lowercase;
+    background-color: #343845;
+}
+
+.home-page-navigation {
+    width: 100%;
+    padding: 1.25em 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: lowercase;
+}
+
+.home-page-navigation h1 {
+    font-size: 2em;
+    font-size: clamp(1.25em, 4vw, 2em);
+    letter-spacing: -0.04em;
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin: 0;
+    margin-inline: 0.5em;
+    padding: 0;
+    color: #f1f1f1;
+}
+
+.home-page-navigation ul {
+    list-style: none;
+    margin: 0;
+    margin-inline: 1em;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: right;
+}
+
+.home-page-navigation li {
+    font-family: "aktiv-grotesk-thin", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.75em;
+    font-size: clamp(1.25em, 4vw, 1.75em);
+    margin: 0 0.5em;
+    display: flex;
+}
+
+.home-page-navigation .nav-links a {
+    color: #e6eaf0;
+    opacity: 85%;
+    text-decoration: none;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.home-page-navigation .logo-link a {
+    color: #ffffff;
+    opacity: 95%;
+    text-decoration: none;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.home-page-navigation a:hover {
+    color: #ffffff;
+    opacity: 1;
 }
 
 .site-main {
@@ -285,14 +356,22 @@ img {
     margin: 0;
 }
 
+.hero {
+    background-color: #343845;
+}
+
 .site-identity {
     max-width: 700px;
     margin-inline: auto;
     padding-inline: 3em;
+    padding-block-start: 7em;
+    padding-block-start: clamp(3em, 10vw, 7em);
+    padding-block-end: 14em;
+    padding-block-end: clamp(4em, 20vw, 14em);
 
     h1 {
-        font-size: 7.5em;
-        font-size: clamp(4em, 15vw, 7.5em);
+        font-size: 9em;
+        font-size: clamp(4em, 15vw, 9em);
         font-weight: 700;
         font-family: "aktiv-grotesk", sans-serif;
         letter-spacing: -0.04em;
@@ -315,7 +394,7 @@ img {
         margin: 0;
         padding: 0;
         opacity: 0.95;
-        color: #fcfcfd;
+        color: #e6eaf0;
 
     }
 
@@ -515,7 +594,6 @@ video {
     display: flex;
     justify-content: space-between;
     text-transform: lowercase;
-    background-color: #343845;
 }
 
 .sub-page-navigation h1 {
@@ -528,7 +606,7 @@ video {
     margin: 0;
     margin-inline: 0.5em;
     padding: 0;
-    color: rgba(255, 255, 255);
+    color: #343845;
 }
 
 .sub-page-navigation ul {
@@ -552,7 +630,7 @@ video {
 }
 
 .sub-page-navigation .nav-links a {
-    color: rgba(255, 255, 255);
+    color: #343845;
     opacity: 85%;
     text-decoration: none;
     padding: 0.5em;
@@ -562,7 +640,7 @@ video {
 }
 
 .sub-page-navigation .logo-link a {
-    color: rgba(255, 255, 255);
+    color: #343845;
     opacity: 95%;
     text-decoration: none;
     padding: 0.5em;
@@ -572,7 +650,7 @@ video {
 }
 
 .sub-page-navigation a:hover {
-    color: rgba(255, 255, 255);
+    color: #343845;
     opacity: 1;
 }
 
