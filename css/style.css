@@ -680,6 +680,11 @@ video {
         text-align: left;
         max-width: 300px;
         text-wrap: pretty;
+
+        @media (width <=768px) {
+            max-width: none;
+        }
+
     }
 
     h2 {
@@ -779,14 +784,14 @@ video {
 
     .image-padding {
 
-        padding: 7em;
+        padding: 3em;
         display: flex;
         flex-direction: column;
-        gap: 7em;
+        gap: 3em;
 
         @media(width<768px) {
-            padding: 4em;
-            gap: 4em;
+            padding: 1.5em;
+            gap: 1.5em;
         }
 
     }
@@ -1010,7 +1015,7 @@ video {
     display: flex;
     flex-direction: column;
     gap: 0;
-    background-color: #1f2129;
+    background-color: #ffffff;
 }
 
 .fullwidth-images img {
