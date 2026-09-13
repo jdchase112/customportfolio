@@ -260,7 +260,7 @@ img {
 /* SITE-STRUCTURE */
 
 ::selection {
-    background-color: #d6dce8;
+    background-color: rgba(195, 204, 221, 0.75);
 }
 
 .site-logo {
