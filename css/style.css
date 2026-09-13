@@ -360,18 +360,19 @@ img {
     background-color: #343845;
 }
 
+
 .site-identity {
     max-width: 700px;
     margin-inline: auto;
     padding-inline: 3em;
-    padding-block-start: 7em;
-    padding-block-start: clamp(3em, 10vw, 7em);
-    padding-block-end: 14em;
-    padding-block-end: clamp(4em, 20vw, 14em);
+    padding-block-start: 3.5em;
+    padding-block-start: clamp(3em, 10vw, 3.5em);
+    padding-block-end: 10em;
+    padding-block-end: clamp(4em, 20vw, 10em);
 
     h1 {
         font-size: 9em;
-        font-size: clamp(4em, 15vw, 9em);
+        font-size: clamp(3.25em, 15vw, 9em);
         font-weight: 700;
         font-family: "aktiv-grotesk", sans-serif;
         letter-spacing: -0.04em;
@@ -387,7 +388,7 @@ img {
 
     h2 {
         font-size: 3em;
-        font-size: clamp(1.5em, 5vw, 3em);
+        font-size: clamp(1.1em, 5vw, 3em);
         font-weight: 200;
         font-family: "aktiv-grotesk-thin", sans-serif;
         text-align: right;
@@ -462,23 +463,22 @@ section {
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .image-container .img-hover {
     position: absolute;
+    height: fit-content;
+    width: fit-content;
     top: 0;
     left: 0;
     opacity: 0;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.025);
     transition: opacity 0.3s ease;
 }
 
-video {
-    height: auto;
-    max-width: 100%;
-}
-
 .image-container:hover .img-hover {
+    position: absolute;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     opacity: 1;
 }
 
@@ -488,7 +488,7 @@ video {
     max-width: none;
     margin: 0;
     padding: 0;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -502,12 +502,11 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.025);
-    transition: transform 0.3s ease;
 }
 
-.thumbgrid li:hover {
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+.img-default {
+    height: fit-content;
+    width: fit-content;
 }
 
 @media (width < 1000px) {
@@ -1070,12 +1069,7 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.025);
     transition: transform 0.3s ease;
-}
-
-.other-projects li:hover {
-    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
