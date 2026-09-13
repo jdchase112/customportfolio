@@ -678,7 +678,7 @@ video {
         font-size: 1.2em;
         line-height: 1.5em;
         text-align: left;
-        max-width: 300px;
+        max-width: 350px;
         text-wrap: pretty;
 
         @media (width <=768px) {
