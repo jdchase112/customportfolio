@@ -471,8 +471,8 @@ section {
 
 .image-container .img-hover {
     position: absolute;
-    height: fit-content;
-    width: fit-content;
+    height: auto;
+    width: auto;
     top: 0;
     left: 0;
     opacity: 0;
