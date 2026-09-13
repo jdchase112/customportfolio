@@ -259,6 +259,10 @@ img {
 
 /* SITE-STRUCTURE */
 
+::selection {
+    background-color: #d6dce8;
+}
+
 .site-logo {
     padding: 1em;
     position: relative;
