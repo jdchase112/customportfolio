@@ -900,6 +900,28 @@ section {
         }
     }
 
+    .link-below {
+        padding-bottom: 0.75em;
+    }
+
+    span {
+        text-align: right;
+    }
+
+    a {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.075em;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        color: #616884;
+    }
+
+    a:hover {
+        color: #252832;
+    }
+
     .three-fourths {
 
         padding-bottom: 2em;
